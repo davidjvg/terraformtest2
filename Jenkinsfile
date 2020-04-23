@@ -14,8 +14,8 @@ pipeline {
     }
                 
        parameters {
-        string(name: 'nombrevm', defaultValue: 'default', description: 'machine')
-        string(name: 'resourcegroup', defaultValue: 'Test_Group', description: 'machine')
+        string(name: 'nombrevm', defaultValue: 'default')
+        string(name: 'resourcegroup', defaultValue: 'Test_Group')
     }
     
     stages {
