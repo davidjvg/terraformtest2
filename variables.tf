@@ -30,11 +30,7 @@ variable "admin_username" {
 # RESOURCE GROUP
 
 
-variable "vm_resource_group_name" {
-  type = string
-  description  = "---- "
-  default  = "Test_Resource_Group"
-}
+variable "vm_resource_group_name" {}
 
 
 # SECURITY GROUP
