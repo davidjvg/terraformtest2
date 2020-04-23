@@ -43,7 +43,7 @@ pipeline {
             stage('execute apply') {
             
             steps {
-                sh 'terraform apply "tfplan"'
+                sh 'cat "tfplan"'
             } 
             
         }
