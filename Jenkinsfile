@@ -31,7 +31,7 @@ pipeline {
       
 
         
-          stage('plan and apply') {
+          stage('execute') {
             
             steps {
                 sh 'terraform plan -out=tfplan -input=false -var tenant_id=$TENANT_ID -var client_secret=$CLIENT_SECRET -var client_id=$CLIENT_ID -var subscription_id=$SUBSCRIPTION_ID -var env_name=$parametro '
