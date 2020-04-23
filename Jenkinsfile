@@ -15,7 +15,7 @@ pipeline {
     }
                 
        parameters {
-        string(name: 'nombre', defaultValue: 'maquinatest', description: 'machine')
+        string(name: 'parametro', defaultValue: 'maquinatest', description: 'machine')
     }
     
     stages {
