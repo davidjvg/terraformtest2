@@ -3,7 +3,6 @@ pipeline {
         image 'hashicorp/terraform' 
         args '--entrypoint='  
     } 
-    
     }
 
     environment {
