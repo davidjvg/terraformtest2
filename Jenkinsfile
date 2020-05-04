@@ -46,7 +46,7 @@ pipeline {
           stage('execute plan') {
 
             steps {
-                sh 'terraform plan -out=tfplan -input=false -var tenant_id=$TENANT_ID -var client_secret=$CLIENT_SECRET -var client_id=$CLIENT_ID -var subscription_id=$SUBSCRIPTION_ID -var env_name=$nombrevm -var location=$location -var location=$location -var vm_resource_group_name=$resourcegroup -var vm_sg_name=$sgname -var vm_size=$vm_size -var volume_size_instance1=$volume_size_instance1 -var storage_os_disk_name=$storage_os_disk_name -var network_name=$network_name -var publicip_name=$publicip_name -var subnet_name=$subnet_name -var nic_name=$nic_name -var nic_ip_configuration_name=$nic_ip_configuration_name tag_project=$tag_project  '
+                sh 'terraform plan -out=tfplan -input=false -var tenant_id=$TENANT_ID -var client_secret=$CLIENT_SECRET -var client_id=$CLIENT_ID -var subscription_id=$SUBSCRIPTION_ID -var env_name=$nombrevm -var location=$location -var location=$location -var vm_resource_group_name=$resourcegroup -var vm_sg_name=$sgname -var vm_size=$vm_size -var volume_size_instance1=$volume_size_instance1 -var storage_os_disk_name=$storage_os_disk_name -var network_name=$network_name -var publicip_name=$publicip_name -var subnet_name=$subnet_name -var nic_name=$nic_name -var nic_ip_configuration_name=$nic_ip_configuration_name -var tag_project=$tag_project  '
             }
 
             }
