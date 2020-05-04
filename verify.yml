@@ -1,0 +1,31 @@
+---
+- hosts: server
+
+  tasks:
+  - name: veryfy apache port
+    wait_for: port=80 timeout=2
+    register: command_result1
+
+- hosts: database
+
+  tasks:
+  - name: veryfy mysql port
+    wait_for:
+       port: 3306
+       timeout: 3
+       host: '{{ansible_ens3.ipv4.address}}'
+    register: command_result2
+
+
+#  - fail: msg="Index failed to return content"
+#    when: "'Hello, from sunny' not in  content"
+
+
+- hosts: control
+
+  tasks:
+  - name: check server url
+    uri: url=http://{{item}} return_content=yes
+    with_items:
+      - ap01
+    register: index

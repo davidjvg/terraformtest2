@@ -13,11 +13,7 @@ variable "subscription_id" {}
 variable "env_name" {}
 #LOCATION OF INSTANCE
 
-variable "location" {
-  type = string
-  description  = "---- "
-  default  = "North Europe"
-}
+variable "location" {}
 
 # USERNAME ADMIN
 
@@ -27,6 +23,7 @@ variable "admin_username" {
   default  = "ubuntu"
 }
 
+
 # RESOURCE GROUP
 
 
@@ -35,32 +32,16 @@ variable "vm_resource_group_name" {}
 
 # SECURITY GROUP
 
-variable "vm_sg_name" {
-  type = string
-  description  = "---- "
-  default  = "TestSG"
-}
+variable "vm_sg_name" {}
 
 # REQUIREMENTS OF VM
 
-variable "vm_size" {
-  type = string
-  description  = "---- "
-  default  = "Standard_B2ms"
-}
+variable "vm_size" {}
 
 
-variable "volume_size_instance1" {
-type = string
- description  = "---- "
-default  = "20"
-}
+variable "volume_size_instance1" {}
 
-variable "storage_os_disk_name" {
-  type = string
-  description  = "---- "
-  default  = "TestOS_disk"
-}
+variable "storage_os_disk_name" {}
 
 variable "storage_os_disk_caching" {
   type = string
@@ -148,11 +129,7 @@ variable "os_profile_linux_config_disable_password_authentication" {
 
 # NETWORK
 
-variable "network_name" {
-  type = string
-  description  = "az-CI"
-  default  = "az_CI_Test"
-}
+variable "network_name" {}
 
 
 variable "network_address_space" {
@@ -162,24 +139,12 @@ variable "network_address_space" {
 }
 
 
-variable "publicip_name" {
-  type = string
-  description  = " ---- "
-  default  = "PublicIpTest"
-}
+variable "publicip_name" {}
 
-variable "publicip_allocation_method" {
-  type = string
-  description  = " ---- "
-  default  = "Dynamic"
-}
+variable "publicip_allocation_method" {}
 
 
-variable "subnet_name" {
-  type = string
-  description  = "subnet1"
-  default = "subnet1_Test"
-}
+variable "subnet_name" {}
 
 
 variable "subnet_address_prefix" {
@@ -189,18 +154,10 @@ variable "subnet_address_prefix" {
 }
 
 
-variable "nic_name" {
-  type = string
-  description  = " ---- "
-  default = "nic_Test"
-}
+variable "nic_name" {}
 
 
-variable "nic_ip_configuration_name" {
-  type = string
-  description  = " ---- "
-  default = "nic_ip_Test"
-}
+variable "nic_ip_configuration_name" {}
 
 variable "nic_ip_configuration_private_ip_address_allocation" {
   type = string
@@ -216,11 +173,7 @@ variable "tag_client" {
   default  = "babel-internal-test"
 }
 
-variable "tag_project" {
-  type = string
-  description  = "ci-il25"
-  default  = "CI-il25-test"
-}
+variable "tag_project" {}
 
 variable "tag_clientApp" {
   type = string
